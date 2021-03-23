@@ -11,11 +11,10 @@ main(int argc, char** argv)
 {
     spinner_t* s = spinner_new(9);
     s->delay = 100000;
-    s->prefix = "Running ";
-    s->suffix = " I'm a suffix";
+    s->prefix = "Doing all the things... ";
     s->final_msg = "\nComplete!\n";
     spinner_start(s);
-    sleep(5); // simulate some work
+    sleep(60);
     spinner_stop(s);
     spinner_free(s);
     return 0;
